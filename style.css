@@ -131,6 +131,7 @@ nav li a:hover {
     bottom: 0;
     width: 35%;
     background-color: var(--text-color);
+    box-shadow: 0 0 5px grey;
     color: var(--black-color);
     padding: 4rem;
     visibility: hidden;
@@ -171,36 +172,54 @@ nav li a:hover {
 }
 .about-container {
   display: flex;
-  gap: 10rem;
+  flex-wrap: wrap;
+  column-gap: 10rem;
+  row-gap: 3rem;
   color: var(--text-color);
   justify-content: center;
   width: 100%;
 }
-.about-container > * {
-  /* flex-basis: 100%; */
-}
-.about-content {
-  /* margin-left: 1.5rem; */
-}
+
 .about-content h3 {
   font-family: var(--style-font);
   text-transform: capitalize;
   margin-bottom: 2rem;
   font-size: 1.5rem;
-  /* flex-basis: 60%; */
 }
 .about-content p:last-child {
   margin-top: 2rem;
 }
-.about-image-container {
-  /* background-color: red; */
-  /* height: 40rem; */
-  /* width: 100%; */
-}
+
 .about-image-container img {
-  width: 20rem;
+  width: 25rem;
   height: 100%;
-  /* width: 100%;
-  height: 100%; */
-  /* display: none; */
+}
+
+/* --------menu section--------- */
+.menu-category ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.menu-category li a {
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.menu-category li a:hover {
+  color: var(--red-color);
+}
+.menu-content {
+  color: var(--text-color);
+}
+.menu-container {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: repeat(2, 30rem);
+  gap: 2rem;
+  justify-content: center;
+}
+.menu-card {
+  border: 2px solid green;
+  height: 12rem;
 }
