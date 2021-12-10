@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --------fontawesome----------- -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- --------CSS and JS -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Malbarista</title>
 </head>
 <body>
-    <header class="container">
+    <header class="container" id="home">
         <!-- <div class=" container home-page-container"> -->
             <nav>
                 <div class="nav-logo">
@@ -72,7 +75,7 @@
                 </div>
             </div>
     </section>
-    <section class="container section menu-section">
+    <section class="container section menu-section" id="menu">
         <h2 class="section-header">Menu</h2>
         <div class="menu-category">
             <ul>
@@ -86,7 +89,7 @@
                     <a href="" id="sides">sides</a>
                 </li>
                 <li>
-                    <a href="" id="coffee-ice-blended">coffee-ice-blended</a>
+                    <a href="" id="coffee-ice-blended">coffee ice-blended</a>
                 </li>
                 <li>
                     <a href="" id="milkshakes">milkshakes</a>
@@ -98,7 +101,7 @@
             <div class="menu-container">
                 <div class="menu-card">
                     <div class="menu-img-container">
-                        <img src="" alt="">
+                        <img src="./img/menu-4.jpg" alt="">
                     </div>
                     <div class="menu-content">
                         <h3>malabar pancakes, maple syrup & butter</h3>
@@ -108,7 +111,7 @@
                 </div>
                 <div class="menu-card">
                     <div class="menu-img-container">
-                        <img src="" alt="">
+                        <img src="./img/menu-1.jpg" alt="">
                     </div>
                     <div class="menu-content">
                         <h3>lempeng and sambal</h3>
@@ -118,17 +121,27 @@
                 </div>
                 <div class="menu-card">
                     <div class="menu-img-container">
-                        <img src="" alt="">
+                        <img src="./img/menu-2.jpg" alt="">
                     </div>
                     <div class="menu-content">
-                        <h3>patri and chicken curry</h3>
+                        <h3>malbar rosher</h3>
                         <p></p>
                         <p>rm10.90</p>
                     </div>
                 </div>
                 <div class="menu-card">
                     <div class="menu-img-container">
-                        <img src="" alt="">
+                        <img src="./img/menu-3.jpg" alt="">
+                    </div>
+                    <div class="menu-content">
+                        <h3>patri and chicken curry</h3>
+                        <p></p>
+                        <p>rm9.40</p>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-img-container">
+                        <img src="./img/menu-5.jpg" alt="">
                     </div>
                     <div class="menu-content">
                         <h3>puttu, banana & orange sugar</h3>
@@ -136,8 +149,99 @@
                         <p>rm9.40</p>
                     </div>
                 </div>
+                <div class="menu-card">
+                    <div class="menu-img-container">
+                        <img src="./img/menu-6.jpg" alt="">
+                    </div>
+                    <div class="menu-content">
+                        <h3>nasi lemak</h3>
+                        <p></p>
+                        <p>rm9.40</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+    <section class="section container gallery-section" id="gallery">
+        <h2 class="section-header">Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-box">
+                <img src="./img/gallery-1.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-2.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-3.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-4.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-5.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-6.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-7.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-8.jpg" alt="">
+            </div>
+            <div class="gallery-box">
+                <img src="./img/gallery-9.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="section container testimonial-section" id="testimonial">
+        <h2 class="section-header">Testimonials</h2>
+        <div class="review-container">
+            <div class="review-card">
+                <div class="star-row">
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>9 months ago</span>
+                </div>
+                <div class="text-row">
+                    <i class="fas fa-quote-left"></i> <span>Cosy place. Should definitely try the signature dish Patri with chicken curry.</span>
+                    <p>Siraij H</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="star-row">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>9 months ago</span>
+                </div>
+                <div class="text-row">
+                    <i class="fas fa-quote-left"></i> <span>Nice place to dine in</span>
+                    <p>Luqman A</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="star-row">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>9 months ago</span>
+                </div>
+                <div class="text-row">
+                    <i class="fas fa-quote-left"></i> <span>Cosy place. Should definitely try the signature dish Patri with chicken
+                        curry.</span>
+                    <p>Naps N</p>
+                </div>
+            </div>
+        </div>
+
     </section>
 </body>
 </html>
