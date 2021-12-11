@@ -327,7 +327,7 @@ nav li a:hover {
 }
 /* -------contact section---------- */
 .contact-section {
-  height: 100%;
+  height: 90%;
 }
 .contact-container {
   display: flex;
@@ -335,20 +335,27 @@ nav li a:hover {
   justify-content: center;
   height: 80%;
   gap: 1rem;
+  /* border: 1px solid red; */
 }
 .map-box {
   height: 100%;
-  box-shadow: 0 0 6px #ccc;
-
-  height: 100%;
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
 }
 .map-box iframe {
   height: 100%;
+  width: 80%;
+}
+.contact-content {
+  flex-grow: 1;
 }
 .contact-content-row {
   /* border: 1px solid red; */
   color: var(--text-color);
-  padding: 1.3rem;
+  padding: 0 1.3rem;
+  margin-bottom: 2rem;
 }
 .contact-head {
   text-transform: capitalize;
@@ -384,5 +391,25 @@ nav li a:hover {
   gap: 1rem;
   margin-top: 1rem;
 }
-.days {
+/* ----------footer-------- */
+.footer-container {
+  display: flex;
+  border: 2px solid red;
+}
+
+.footer-card {
+  color: var(--text-color);
+  border: 1px solid red;
+}
+.footer-card:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.instagram-container {
+  /* display: grid;
+  grid-template-columns: repeat(3, 5rem); */
+  border: 1px solid red;
+}
+.instagram-container a img {
+  width: 100%;
 }
