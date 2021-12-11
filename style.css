@@ -392,24 +392,86 @@ nav li a:hover {
   margin-top: 1rem;
 }
 /* ----------footer-------- */
-.footer-container {
-  display: flex;
-  border: 2px solid red;
+
+footer {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  border-top: 1px solid var(--grey-color);
 }
 
+.title-footer,
+.footer-content {
+  /* width: max-content; */
+}
 .footer-card {
   color: var(--text-color);
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  padding: 0 1rem;
+  padding-top: 5rem;
 }
 .footer-card:nth-child(2) {
   display: flex;
   flex-direction: column;
 }
+.title-footer {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.footer-content {
+  margin-top: 1rem;
+}
+.about-footer .footer-content p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.about-footer .footer-content a {
+  font-size: 0.9rem;
+  color: var(--red-color);
+}
+.contact-footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.contact-footer .footer-content span {
+  font-size: 0.8rem;
+}
+.footer-content .days,
+.footer-content .time {
+  font-size: 0.8rem;
+}
+.footer-content .days li,
+.footer-content .time li {
+  padding: 0.4rem 0;
+}
 .instagram-container {
-  /* display: grid;
-  grid-template-columns: repeat(3, 5rem); */
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
   border: 1px solid red;
+  gap: 0.8rem;
+}
+.instagram-container a {
+  border: 1px solid gray;
+  overflow: hidden;
 }
 .instagram-container a img {
   width: 100%;
+  transition: 0.3s;
+}
+.instagram-container a img:hover {
+  transform: scale(1.2);
+}
+
+/* -------------other--------- */
+.title-footer,
+.footer-content {
+  border: 1px solid red;
+}
+.footer-card > .day-time-container {
+  margin-top: 1rem;
+}
+.footer-card a {
+  color: var(--text-color);
 }
