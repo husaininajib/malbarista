@@ -306,10 +306,7 @@
             <div class="footer-content">
                 <p>
                     Malbarista Book Cafe is a local brand coffee house that promotes delicious coffee and a relaxing vibe.
-                    This shop
-                    serves....
                 </p>
-                <a href="#about">Read more..</a>
             </div>
             
         </div>
@@ -325,8 +322,8 @@
                     Malaysia</span>
                 <span><a href="">+6013-904 9116</a></span>
                 <span><a href="">contact@malbarista.com</a></span>
-                <span>
-                    <a href="https://www.foodpanda.my/restaurant/u3ix/malbarista-book-cafe" target="_blank" class="button">Order Now</a>
+                <span class="button order-now-button">
+                    Order Now
                 </span>
                 <span>
                     <a href="https://www.foodpanda.my/restaurant/u3ix/malbarista-book-cafe"><img src="./img/foodpanda-logo.svg" alt=""></a>
@@ -406,29 +403,42 @@
             
         </div>
     </footer>
-    <div class="arrow-to-home">
-        <a href="#home">&#10094;</a>
-    </div>
-    <div class="foodpanda-popup">
-        <div class="foodpanda-container">
-            <span>This will redirect you to FoodPanda</span>
-            <div class="foodpanda-btn">
-                <a href="https://www.foodpanda.my/restaurant/u3ix/malbarista-book-cafe" target="_blank" class="button">Click Here</a>
-            </div>
-            <div class="close-btn close">
-                <i class="far fa-times-circle"></i>
+    <div class="popup-window">
+        <div class="arrow-to-home">
+            <a href="#home">&#10094;</a>
+        </div>
+        <div class="foodpanda-popup">
+            <div class="foodpanda-container">
+                <span>This will redirect you to FoodPanda</span>
+                <div class="foodpanda-btn">
+                    <a href="https://www.foodpanda.my/restaurant/u3ix/malbarista-book-cafe" target="_blank" class="button">Click
+                        Here</a>
+                </div>
+                <div class="close-btn close">
+                    <i class="far fa-times-circle"></i>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="review-popup">
-        <div class="review-popup-container">
-            <h2>Share your experiences with us</h2>
-            <form action="">
-                <textarea name="review" id="" cols="30" rows="10"></textarea>
-                <button type="submit" class="button">submit</button>
-            </form>
-            <div class="review-close-btn close">
-                <i class="far fa-times-circle"></i>
+        <div class="review-popup">
+            <div class="review-popup-container">
+                <h2>Share your experiences with us</h2>
+                <form action="">
+                    <div class="username-container">
+                        <label for="name">Name</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="review-text-container">
+                        <label for="review">Feedback</label>
+                        <textarea name="review" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="review-submit-btn button">submit</button>
+                </form>
+                <div class="review-close-btn close">
+                    <i class="far fa-times-circle"></i>
+                </div>
+                <div class="review-success-container">
+                    <span>Feedback submitted</span>
+                </div>
             </div>
         </div>
     </div>

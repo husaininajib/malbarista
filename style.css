@@ -930,6 +930,7 @@ button a {
   }
 }
 
+/* ----------------popup window----------------- */
 .arrow-to-home {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.1);
@@ -939,15 +940,12 @@ button a {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  /* transform: translateY(500%); */
 }
 .arrow-to-home a {
   font-size: 1.2rem;
   color: var(--text-color);
   transform: rotate(90deg);
   padding: 0 12px;
-  /* width: 32px;
-  height: 32px; */
 }
 .arrow-to-home.appear {
   bottom: 3%;
@@ -1008,14 +1006,13 @@ button a {
   cursor: pointer;
   font-weight: 600;
 }
-
 .review-popup {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.9);
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -1029,30 +1026,55 @@ button a {
   display: flex;
   flex-direction: column;
 }
+.review-popup-container {
+  position: relative;
+}
 .review-popup-container h2 {
   font-weight: 300;
   font-family: var(--style-font);
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.review-popup-container textarea {
+.review-popup-container label {
+  color: var(--text-color);
+}
+.review-text-container textarea,
+.username-container input {
   font-family: var(--main-font);
   color: var(--text-color);
   padding: 1.5rem;
   background-color: var(--black-color);
   border: 1px solid var(--red-color);
 }
-textarea:focus {
+.username-container,
+.review-text-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+}
+.username-container {
+  margin-bottom: 1rem;
+}
+.username-container input {
+  padding: 0.5rem;
+}
+.username-container input.change-color {
+  border-color: green;
+}
+.username-container input:focus {
   outline: none;
 }
-form .button {
+.review-text-container textarea:focus {
+  outline: none;
+}
+.review-popup-container .button {
   cursor: pointer;
   padding-bottom: 0.4rem;
   text-transform: uppercase;
   margin: auto;
   margin-top: 1.5rem;
 }
-form .button:hover {
+.review-popup-container .button:hover {
   background-color: var(--red-color);
 }
 .review-close-btn {
@@ -1065,8 +1087,26 @@ form .button:hover {
   font-size: 1.4rem;
   cursor: pointer;
 }
-.review-popup-container {
-  position: relative;
+/* .review-success-container {
+  position: absolute;
+  background-color: var(--red-color);
+  padding: 2rem;
+  top: 50%;
+  left: 20%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+} */
+.review-success-container {
+  text-align: center;
+  margin-top: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.review-success-container.show-success {
+  visibility: visible;
+  opacity: 1;
 }
 @media screen and (max-width: 472px) {
   .foodpanda-container,
