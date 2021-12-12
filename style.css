@@ -203,6 +203,18 @@ nav li a:hover {
   nav {
     padding: 0 2rem;
   }
+  .nav-panel {
+    padding: 2rem;
+    width: 45%;
+  }
+  .nav-panel li a {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 511px) {
+  .nav-logo a {
+    font-size: 1rem;
+  }
 }
 
 /* ----------about section----------- */
@@ -242,10 +254,10 @@ nav li a:hover {
 }
 
 @media screen and (max-width: 519px) {
-  br {
+  .about-content br {
     content: "";
   }
-  br::after {
+  .about-content br::after {
     content: "";
   }
   .about-content p {
@@ -283,7 +295,6 @@ nav li a:hover {
   justify-content: center;
 }
 .menu-card {
-  /* box-shadow: 0 0 8px #ccc; */
   border: 1.5px solid #ccc;
   height: 12rem;
   display: flex;
@@ -344,7 +355,8 @@ nav li a:hover {
 }
 @media screen and (max-width: 1314px) {
   .menu-container {
-    grid-template-columns: repeat(auto-fit, 32rem);
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: start;
   }
 }
 @media screen and (max-width: 877px) {
@@ -363,7 +375,6 @@ nav li a:hover {
   }
   .category-panel.show-category-list {
     display: inline-block;
-    /* transform: scaleY(1); */
   }
   .arrow {
     transform: rotate(0);
@@ -539,14 +550,12 @@ nav li a:hover {
   justify-content: center;
   height: 80%;
   gap: 1rem;
-  border: 1px solid red;
 }
 .map-box {
   height: 100%;
   flex-grow: 2;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid red;
   margin-right: 2rem;
 }
 .map-box iframe {
@@ -557,7 +566,6 @@ nav li a:hover {
   flex-grow: 1;
 }
 .contact-content-row {
-  /* border: 1px solid red; */
   color: var(--text-color);
   padding: 0 1.3rem;
   margin-bottom: 2rem;
@@ -598,8 +606,8 @@ nav li a:hover {
   margin-top: 1rem;
 }
 @media screen and (max-width: 1221px) {
-  .contact-section {
-    /* height: auto; */
+  .map-box {
+    height: 60%;
   }
   .map-box iframe {
     height: 100%;
@@ -610,26 +618,42 @@ nav li a:hover {
   .contact-section {
     height: auto;
   }
+  .map-box {
+    margin-right: 0;
+  }
+  /* .contact-content-row span {
+    font-size: 82%;
+  } */
+  .contact-number {
+    font-size: 1rem;
+  }
+  .address-details {
+    font-size: 82%;
+  }
+  .contact-head {
+    font-size: 1.1rem;
+  }
+  .contact-content-row .button {
+    font-size: 80%;
+  }
+  .days li,
+  .time li {
+    font-size: 85%;
+  }
 }
 /* ----------footer-------- */
 
 .footer-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
+  justify-content: center;
   border-top: 1px solid var(--grey-color);
+  padding-top: 2rem;
+  row-gap: 1.5rem;
 }
-@media screen and (max-width: 1068px) {
-  .footer-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-}
-
 .footer-card {
   color: var(--text-color);
   padding: 0 1rem;
-  padding-top: 5rem;
 }
 .footer-card:nth-child(2) {
   display: flex;
@@ -701,12 +725,16 @@ nav li a:hover {
 .socials-ul li a:hover {
   color: var(--red-color);
 }
-
-/* -------------other--------- */
-.title-footer,
-.footer-content {
-  /* border: 1px solid red; */
+@media screen and (max-width: 1273px) {
+  .instagram-container {
+    grid-template-columns: repeat(3, 4rem);
+  }
+  .footer-section {
+    justify-content: flex-start;
+  }
 }
+/* -------------other--------- */
+
 .footer-card > .day-time-container {
   margin-top: 1rem;
 }
@@ -731,6 +759,7 @@ footer {
 }
 .right-container p span {
   color: var(--red-color);
+  font-size: 0.8rem;
 }
 button {
   width: max-content;
@@ -742,7 +771,6 @@ button {
 }
 button a {
   color: var(--red-color);
-  /* padding: 1.5rem; */
 }
 .right-container button a:hover {
   color: var(--text-color);
@@ -754,4 +782,13 @@ button a {
   color: var(--text-color);
   border-radius: 2px;
   box-shadow: 0 0 8px rgba(211, 211, 211, 0.4);
+}
+@media screen and (max-width: 615px) {
+  footer {
+    justify-content: flex-start;
+  }
+  .right-container p,
+  .right-container span {
+    font-size: 80%;
+  }
 }
