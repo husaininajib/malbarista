@@ -544,13 +544,6 @@ nav li a:hover {
     grid-column: span 4;
   }
 }
-
-/* @media screen and (max-width: 986px) {
-  .gallery-container {
-    grid-template-rows: repeat(4, minmax(9rem, 13rem));
-    gap: 1rem;
-  }
-} */
 /* --------testimonials---------- */
 .review-container {
   display: flex;
@@ -933,4 +926,27 @@ button a {
   .right-container span {
     font-size: 80%;
   }
+}
+
+.arrow-to-home {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.1);
+  bottom: -100%;
+  right: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  /* transform: translateY(500%); */
+}
+.arrow-to-home a {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transform: rotate(90deg);
+  padding: 0 12px;
+  /* width: 32px;
+  height: 32px; */
+}
+.arrow-to-home.appear {
+  bottom: 3%;
 }
