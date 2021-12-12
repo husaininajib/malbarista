@@ -6,6 +6,11 @@ const categoryPanel = document.querySelector(".category-panel")
 const arrow = document.querySelector(".arrow")
 const arrowHome = document.querySelector(".arrow-to-home")
 const header = document.querySelector("header")
+const closeButton = document.querySelectorAll(".close")
+const orderNowButton = document.querySelector(".order-now-button")
+const foodpandaPopup = document.querySelector(".foodpanda-popup")
+const reviewPopup = document.querySelector(".review-popup")
+const reviewButton = document.querySelector(".review-button")
 
 
 hamburger.addEventListener("click", () => {
@@ -16,7 +21,7 @@ window.addEventListener("scroll", () => {
     const scrollHeight = window.pageYOffset
     const headerOffsetTop = header.offsetTop
     const headerHeight = header.clientHeight
-    
+
     if (scrollHeight === 0) {
         nav.classList.remove("insert-border")
         arrowHome.classList.remove("appear")
@@ -33,10 +38,18 @@ categoryButton.addEventListener("click", () => {
     categoryPanel.classList.toggle("show-category-list")
     arrow.classList.toggle("rotate")
 })
-window.addEventListener("scroll", () => {
-    const scrollHeight = window.pageYOffset
-    // const sectionOffset = 
-})
 
-const section = document.querySelectorAll("section")
+
+orderNowButton.addEventListener("click", () => {
+    foodpandaPopup.classList.add("show-popup")
+})
+reviewButton.addEventListener("click", () => {
+    reviewPopup.classList.add("show-review")
+})
+closeButton.forEach(button => {
+    button.addEventListener("click", () => {
+        foodpandaPopup.classList.remove("show-popup")
+        reviewPopup.classList.remove("show-review")
+    })
+})
 

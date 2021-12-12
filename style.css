@@ -121,7 +121,7 @@ nav li a:hover {
   border: 1px solid var(--text-color);
   cursor: pointer;
 }
-.order-now-button a {
+.order-now-button span {
   color: var(--text-color);
   text-transform: uppercase;
 }
@@ -228,7 +228,7 @@ nav li a:hover {
     padding: 0.25em;
     margin-top: 1rem;
   }
-  .order-now-button a {
+  .order-now-button span {
     font-size: 0.75rem;
   }
 }
@@ -693,6 +693,8 @@ nav li a:hover {
   margin-top: 1.2rem;
   background-color: var(--red-color);
   border: 1px solid red;
+  cursor: pointer;
+  padding-bottom: 0.4rem;
 }
 .button:hover {
   background-color: transparent;
@@ -716,10 +718,10 @@ nav li a:hover {
     width: 100%;
   }
   .contact-content {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, auto));
+    justify-content: space-between;
+    row-gap: 3rem;
   }
   .contact-content-row {
     margin-bottom: 0;
@@ -733,15 +735,10 @@ nav li a:hover {
     height: 16rem;
   }
 }
-@media screen and (max-width: 904px) {
-  .contact-content {
-    justify-content: flex-start;
-  }
-}
-
 @media screen and (max-width: 854px) {
   .contact-content {
-    justify-content: flex-start;
+    row-gap: 2rem;
+    justify-content: center;
   }
   .contact-number {
     font-size: 1rem;
@@ -771,6 +768,11 @@ nav li a:hover {
   }
   .contact-content .button {
     margin-top: auto;
+  }
+}
+@media screen and (max-width: 446px) {
+  .contact-content {
+    justify-content: start;
   }
 }
 /* ----------footer section-------- */
@@ -949,4 +951,129 @@ button a {
 }
 .arrow-to-home.appear {
   bottom: 3%;
+}
+@media screen and (max-width: 683px) {
+  .arrow-to-home {
+    right: 2rem;
+  }
+}
+.foodpanda-popup {
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.foodpanda-popup.show-popup {
+  display: flex;
+}
+.foodpanda-popup.remove-popup {
+  display: none;
+}
+.foodpanda-container {
+  background-color: #ff007f;
+  width: max-content;
+  padding: 2rem;
+  padding-top: 3.5rem;
+  color: var(--black-color);
+  position: relative;
+  font-weight: 600;
+}
+.foodpanda-btn {
+  margin-top: 1.5rem;
+}
+.foodpanda-btn .button {
+  background-color: var(--black-color);
+  color: #ff007f;
+  border: 1.5px solid #ff007f;
+  transition: 0.3s;
+}
+.foodpanda-btn .button:hover {
+  letter-spacing: 2px;
+}
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  background-color: #ff007f;
+  color: var(--black-color);
+  padding: 0 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.review-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.review-popup.show-review {
+  display: flex;
+}
+.review-popup-container form {
+  display: flex;
+  flex-direction: column;
+}
+.review-popup-container h2 {
+  font-weight: 300;
+  font-family: var(--style-font);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.review-popup-container textarea {
+  font-family: var(--main-font);
+  color: var(--text-color);
+  padding: 1.5rem;
+  background-color: var(--black-color);
+  border: 1px solid var(--red-color);
+}
+textarea:focus {
+  outline: none;
+}
+form .button {
+  cursor: pointer;
+  padding-bottom: 0.4rem;
+  text-transform: uppercase;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+form .button:hover {
+  background-color: var(--red-color);
+}
+.review-close-btn {
+  position: absolute;
+  color: var(--text-color);
+  background-color: transparent;
+  bottom: 100%;
+  left: 100%;
+  padding: 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.review-popup-container {
+  position: relative;
+}
+@media screen and (max-width: 472px) {
+  .foodpanda-container,
+  .review-popup-container {
+    width: 80%;
+  }
+  .review-close-btn {
+    left: 90%;
+  }
 }
