@@ -16,6 +16,7 @@ window.addEventListener("scroll", () => {
     const scrollHeight = window.pageYOffset
     const headerOffsetTop = header.offsetTop
     const headerHeight = header.clientHeight
+    
     if (scrollHeight === 0) {
         nav.classList.remove("insert-border")
         arrowHome.classList.remove("appear")
