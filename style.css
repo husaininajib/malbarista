@@ -991,6 +991,7 @@ button a {
   color: #ff007f;
   border: 1.5px solid #ff007f;
   transition: 0.3s;
+  font-weight: 600;
 }
 .foodpanda-btn .button:hover {
   letter-spacing: 2px;
@@ -1087,16 +1088,6 @@ button a {
   font-size: 1.4rem;
   cursor: pointer;
 }
-/* .review-success-container {
-  position: absolute;
-  background-color: var(--red-color);
-  padding: 2rem;
-  top: 50%;
-  left: 20%;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s;
-} */
 .review-success-container {
   text-align: center;
   margin-top: 1rem;
