@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger")
 const navPanel = document.querySelector(".nav-panel")
 const nav = document.querySelector("nav")
+const navLink = document.querySelectorAll(".nav-link")
 const arrow = document.querySelector(".arrow")
 const arrowHome = document.querySelector(".arrow-to-home")
 const header = document.querySelector("header")
@@ -24,6 +25,13 @@ window.addEventListener("scroll", () => {
     if (scrollHeight > headerHeight) {
         arrowHome.classList.add("appear")
     }
+})
+navLink.forEach(list => {
+    list.addEventListener("click", () => {
+    navPanel.classList.remove("show")
+    hamburger.classList.remove("rotate")
+
+    })
 })
 
 const categoryButton = document.querySelector(".category-hamburger")
